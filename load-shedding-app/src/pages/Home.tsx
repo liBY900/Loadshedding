@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import AreaSelector from "../src/components/AreaSelector";
+import { useState } from "react";
+import AreaSelector from "../components/AreaSelector";
 
 const Home = () => {
   const [area, setArea] = useState("");
