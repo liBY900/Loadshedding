@@ -5,10 +5,8 @@ type Props = {
 };
 
 const areas = [
-  "Cape Town Zone 1",
-  "Cape Town Zone 2",
-  "Cape Town Zone 3",
-  "Cape Town Zone 4",
+  { name: "Cape Town CBD", id: "za_wc_cpt_capetowncbd_utix" },
+  { name: "Fourways", id: "za_gt_jhb_fourways_4pef" },
 ];
 
 const AreaSelector: React.FC<Props> = ({ onSelect }) => {
@@ -20,8 +18,8 @@ const AreaSelector: React.FC<Props> = ({ onSelect }) => {
         <option value="">-- Choose Area --</option>
 
         {areas.map((area) => (
-          <option key={area} value={area}>
-            {area}
+          <option key={area.id} value={area.id}>
+            {area.name}
           </option>
         ))}
       </select>
